@@ -1,0 +1,333 @@
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+
+}
+/* ........................................... */
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* #________NAVBAR______________# */
+
+.bd-g{
+  border: 2px green solid;
+}
+.bd-r {
+  border: 2px red solid;
+}
+
+.Nav{
+background: linear-gradient(to left, #362ca3, #110549);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo{
+  padding: 1.2rem 1.5rem 0.4rem 1.5rem;
+}
+
+.logo>img{
+  width: 13rem;
+  height: 3.5rem;
+}
+
+.abt{
+  
+  color: rgb(143, 149, 155);
+  padding: 0.8rem;
+}
+
+
+/* #________________HOME_____________________# */
+
+.Home{
+
+  background: linear-gradient(to left, #5247ce, #100553);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hm_content{
+  padding: 0rem;
+}
+.hm_info{
+  color:whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hm_info>h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-size: 2rem;
+}
+.hm_info>p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-size: 1.3rem;
+  color: rgb(215, 219, 223);
+}
+.hm_card{
+  background: whitesmoke;
+  padding: 5rem 3rem 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+
+}
+textarea:focus,
+input:focus {
+  outline: none;
+
+}
+#inputTag{
+ width: 20rem;
+  border: none;
+  border-bottom:1px solid blue;
+  background-color: whitesmoke;
+  margin-bottom: 2rem;
+  
+}
+
+.hm_btn{
+  text-decoration: none;
+  margin-top: 1rem;
+  color: antiquewhite;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  background: #0f49b4;
+  letter-spacing: 0.1rem;
+  padding-inline: 2rem;
+}
+
+/* #___________QUIZ__PAGE_________________# */
+
+.q_page{
+  background: linear-gradient(to left, #5247ce, #100553);
+ min-height: 87vh;
+}
+
+/* #______________User_info(section-1)___________# */
+.user_info{
+  background: whitesmoke;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  color: #0e1f3f;
+}
+.user_info>p{
+  color: #636468;
+  line-height: 0.4rem;
+  padding-left: 0.5rem;
+}
+
+
+
+
+/* #_____MAIN__Comp(section-2)_______# */
+.main_comp{
+display: grid;
+align-items: flex-start;
+justify-content: center;
+grid-template-columns: repeat(2, 1fr);
+grid-template-columns: 1fr 4fr 1fr;
+gap: 2rem;
+margin: 1rem;
+padding-top: 1rem;
+padding-bottom: 2rem;
+
+}
+
+@media (max-width: 65em) {
+  .main_comp{
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+ 
+}
+
+.quest_container{
+  background: whitesmoke;
+  padding: 1rem ;
+  border-radius: 2%;
+  
+  
+}
+.quest_text{
+  padding-inline: 1rem;
+}
+.clr{
+  color: blue;
+}
+.quest_text>h2{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  color: #0f1d38;
+}
+
+.quest_options{
+  padding-right: 7rem;
+}
+
+.li_options{
+text-decoration: none;
+list-style-type: none;
+background-color: #ccdeee;
+border: 1px solid rgb(1, 1, 78);
+border-radius: 4px;
+
+padding: 0.2rem;
+margin-bottom: 0.6rem;
+cursor: pointer;
+}
+
+.li_options:hover{
+  background-color: #7cafee;
+}
+
+.li_options>span{
+  padding-left: 0.3rem;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  color: #023491;
+}
+.btns>button[disabled] {
+  
+  background-color: rgb(198, 202, 204);
+}
+
+.btns{
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  gap: 2rem;
+}
+.btns>button{
+  
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.btn_blue{
+  background-color: #4291db;
+}
+.btn_green{
+  background-color: rgb(7, 204, 49);
+}
+
+/* #__________OPTIONS__SELECTED______________# */
+
+.sel_options_container{
+  background: whitesmoke;
+  width: 16rem;
+  height: 12rem;
+  
+  padding: 1rem;
+
+  border-radius: 4%; ;
+}
+.heading{
+  padding-left: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #4f5053;
+}
+.sel_options_val{
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  color: #2a3e66;
+  font-weight: 600;
+}
+/* #__________TIMER______________# */
+
+.timer{
+  background: whitesmoke;
+  width: 7rem;
+  border-radius: 5%;
+  padding: 2rem;
+  font-size: 3rem;
+  border: 3px solid rgb(63, 174, 248);
+  color: rgb(90, 89, 89);
+  
+}
+
+/* #__________RESULT__CARD______________# */
+
+.result_card{
+  background: whitesmoke;
+margin: 1rem;
+min-height: 50vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.Link_btn{
+  margin-top: 2rem;
+text-decoration: none;
+background: #0f49b4;
+padding: 6px 19px;
+font-size: 1.2rem;
+color: whitesmoke;
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+

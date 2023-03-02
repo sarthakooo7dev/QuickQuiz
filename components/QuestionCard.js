@@ -1,8 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useState } from 'react'
 import Quest_data from '../data/data'
 
 const QuestionCard = ({ HandleResultStatus }) => {
+  // # States and there use:-
+  //    -> currentQuestion: used to track current question displayed
+  //    -> selectedOptions: used to track all the options selected by user
+  //    -> scoreArray : used to track scores by having boolean values according to options selected
+  //    -> seconds : used to dec. seconds for the timer
+  //    -> timerBar: used to dec. as seconds dec. for div(element below seconds)
+
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedOptions, setSelectedOptions] = useState([
     ...Array(Quest_data.length),
@@ -10,6 +18,8 @@ const QuestionCard = ({ HandleResultStatus }) => {
   const [scoreArray, setScoreArray] = useState([...Array(Quest_data.length)])
   const [seconds, setSeconds] = useState(59)
   const [timerBar, setTimerBar] = useState(100)
+
+  // #note: Dec. timer is achieved with useffect with setInterval
 
   useEffect(() => {
     console.log(seconds, '--useeffect')
@@ -25,6 +35,8 @@ const QuestionCard = ({ HandleResultStatus }) => {
     return () => clearInterval(timer)
   }, [seconds])
 
+  // #Helper fnc - It is uesd to handle prev & next clicks
+
   const HandleClick = (clickVal) => {
     if (clickVal === 'next') {
       setCurrentQuestion(currentQuestion + 1)
@@ -34,6 +46,8 @@ const QuestionCard = ({ HandleResultStatus }) => {
       setCurrentQuestion(currentQuestion - 1)
     }
   }
+
+  // #Helper fnc - It is uesd to handle click on options
 
   const HandleOptionsClick = (optionVal, optiontext) => {
     const newArrOptions = [...selectedOptions]
@@ -48,6 +62,7 @@ const QuestionCard = ({ HandleResultStatus }) => {
     console.log(newArrOptions, '--options selected by user')
   }
 
+  // #Helper fnc - It is uesd to handle submit.It calculates totals score and changes result Status.
   const HandleSubmit = () => {
     const result = scoreArray.reduce((acc, curr) => {
       if (curr === true) {
@@ -61,6 +76,8 @@ const QuestionCard = ({ HandleResultStatus }) => {
 
   return (
     <div className="main_comp bd-r">
+      {/* #timer section */}
+
       <div className="bd-g timer">
         00:{seconds}
         <div
@@ -74,6 +91,7 @@ const QuestionCard = ({ HandleResultStatus }) => {
         ></div>
       </div>
 
+      {/* Main component where questions is displayed */}
       <div className="quest_container">
         <div className="quest_text ">
           <h2>
@@ -122,6 +140,9 @@ const QuestionCard = ({ HandleResultStatus }) => {
           )}
         </div>
       </div>
+
+      {/* Selected options section */}
+
       <div className="sel_options_container">
         <h2 className="heading">Options Selected</h2>
         {selectedOptions.map((val, index) => {

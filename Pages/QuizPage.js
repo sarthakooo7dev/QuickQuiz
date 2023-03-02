@@ -7,14 +7,17 @@ const QuizPage = () => {
   const [resultStatus, setResultStatus] = useState(false)
   const [finalScore, setFinalScores] = useState(0)
 
+  // #using location state to get username & email from home page Link to
   const location = useLocation()
   const { username, email } = location.state
 
+  // # Helper fnc -- it is used to get result status(i.e if true result card displayed)
   const HandleResultStatus = (result) => {
     setFinalScores(result)
     setResultStatus(true)
   }
 
+  // #note: component QuestionCard & ResultCard are rendered as per resultStatus condition.
   return (
     <div className="q_page bd-r">
       <div className="user_info">

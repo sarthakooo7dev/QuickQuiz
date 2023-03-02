@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import '../index.css'
 
+// note: A basic Navbar at the top
+
 const Navbar = () => {
   return (
     <div>

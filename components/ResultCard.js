@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+//  #note: This component is used to display result
+
 const ResultCard = ({ finalScore }) => {
   return (
     <div className="result_card ">

@@ -5,38 +5,40 @@ const Home = () => {
   const [email, setEmail] = useState('demo@gmail.com')
 
   return (
-    <div>
-      <div className="Home">
-        <div className="hm_info ">
-          <h2>Enhance your knowledge,let's QuickQuiz</h2>
-          <p>Play one min games & win rewards !!</p>
-        </div>
-        <div className="hm_content">
-          <div className="hm_card ">
-            <div>
-              <input
-                type="text"
-                id="inputTag"
-                placeholder=" Name"
-                onChange={(e) => setUserName(e.target.value)}
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                id="inputTag"
-                placeholder=" Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <Link
-              className="Link_btn"
-              to="/quiz"
-              state={{ username: username, email: email }}
-            >
-              Done
-            </Link>
+    <div className="Home">
+      {/* #Displaying basic info about quiz */}
+      <div className="hm_info ">
+        <h2>Enhance your knowledge,let's QuickQuiz</h2>
+        <p>Play one min games & win rewards !!</p>
+      </div>
+
+      {/* #Gettting user info   */}
+
+      <div className="hm_content">
+        <div className="hm_card ">
+          <div>
+            <input
+              type="text"
+              id="inputTag"
+              placeholder=" Name"
+              onChange={(e) => setUserName(e.target.value)}
+            />
           </div>
+          <div>
+            <input
+              type="text"
+              id="inputTag"
+              placeholder=" Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <Link
+            className="Link_btn"
+            to="/quiz"
+            state={{ username: username, email: email }}
+          >
+            Done
+          </Link>
         </div>
       </div>
     </div>

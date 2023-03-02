@@ -160,7 +160,8 @@ input:focus {
 .user_info{
   background: whitesmoke;
   padding: 1rem;
-  margin: 0.5rem;
+  margin-inline: 1rem;
+  padding-inline: 3rem;
   border-radius: 10px;
   color: #0e1f3f;
 }
@@ -181,8 +182,9 @@ justify-content: center;
 grid-template-columns: repeat(2, 1fr);
 grid-template-columns: 1fr 4fr 1fr;
 gap: 2rem;
-margin: 1rem;
+margin: 0rem;
 padding-top: 1rem;
+padding-inline: 1rem;
 padding-bottom: 2rem;
 
 }

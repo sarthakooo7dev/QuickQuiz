@@ -75,7 +75,7 @@ const QuestionCard = ({ HandleResultStatus }) => {
   }
 
   return (
-    <div className="main_comp bd-r">
+    <div className="main_comp">
       {/* #timer section */}
 
       <div className="bd-g timer">

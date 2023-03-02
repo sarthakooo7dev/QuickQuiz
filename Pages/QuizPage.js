@@ -19,7 +19,7 @@ const QuizPage = () => {
 
   // #note: component QuestionCard & ResultCard are rendered as per resultStatus condition.
   return (
-    <div className="q_page bd-r">
+    <div className="q_page ">
       <div className="user_info">
         <h1>Hey,{username}</h1>
         <p>{email}</p>
